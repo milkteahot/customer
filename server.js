@@ -35,5 +35,19 @@ app.get('/api/customers', (req,res)=>{
             ]);
 });
 
+app.get('/getMyPosts/1', (req,res)=> {
+  res.send([
+    
+        {"_id":"5e0c99c0c11a0b23a15ccb39","like_count":0,"comment_count":0
+        ,"title":"오늘은1월1일","text":"0101"
+        ,"created_at":"2020-01-01T13:08:16.572Z"
+        ,"isLike":false,"isClip":false}
+        ,{"_id":"5e0064ba527dc9944cb45e6a","like_count":0,"comment_count":0
+        ,"title":"첫번째 글 test","text":"test"
+        ,"created_at":"2019-12-23T06:54:50.048Z"
+        ,"isLike":false,"isClip":false}
+      ]);
+});
+
 app.listen(port, ()=> console.log(`Listening on port ${port}`));
 
